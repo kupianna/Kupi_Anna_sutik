@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Schoolbell";
+    src: url("/Schoolbell-Regular.ttf");
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Schoolbell";
+    background-image: url(/Kepek/background.png);
+    background-repeat: no-repeat;
+    max-width: 100vh;
+    max-height: 100vh;
+    padding-inline: 32px;
+    padding-block:64px;
+}
+main{
+    max-width: 90vw;
+    min-height:calc(100vh - 128px);
+    background-color: #fff;
+    border: radius 12px; 
+    border: 3px solid black;
+    margin:auto;
+}
+.section{
+    padding: 32px;
+}
+
+.menu{
+    padding-top: 0;
+    color: #8d5b1a;
+    background-color: #feda70;
+    font-size: 20px;
+    padding;: 0.5rem;
+    border-radius:  12px;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 28px;
+    font-weight: 400;
+}
+h2{
+    font-size: 56px;
+    font-weight: 400;
+}
+p{
+    font-size: 24px;
+    max-width: 60ch;
+    font-weight: 400;
+}
+article{
+    height: fit-content;
+    max-width: 1080px;
+    margin: auto;
+    display: grid ;
+}
+.content{
+
+}
+.orange{
+
+}
+.grid-layout{
+    display: grid;
+    grid-template-columns: repeat(2, 1 fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 1.5rem;
+    padding: 2rem 4rem ;
+    flex: 1;
+}
+.grid-item{
+
+
+}
