@@ -1,129 +1,170 @@
 @font-face {
-    font-family: "Schoolbell";
-    src: url("/Schoolbell-Regular.ttf");
+    font-family: Schoolbell;
+    src: url(/forras/Schoolbell-Regular.ttf);
 }
-
+:root{
+    --betuvastagsag: 400;
+    --fo_szin: #feda70;
+    --masodlagos_szin: #8d5b1a;
+}
 *{
-    margin:0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: "Schoolbell";
+    margin: 0;
+    padding: 0;
+    font-family: Schoolbell;
 }
-
 body{
-   
-    background-image: url(/Kepek/background.png);
+    background-image: url(/forras/background.png);
     background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
-    min-width: 100vw;
+    /* min-width: 100vw; */
+    padding-left: 32px;
+    padding-right: 32px;
+   /*x tengely*/
     padding-inline: 32px;
-    padding-block:64px;
-}
-.img{
-  width: 100%;
-  height: 550px;
-  object-fit: cover;
-  image-orientation: right;
-}
+    padding-top: 64px;
+    padding-bottom: 64px;
+/*y tengely*/
+    padding-block: 64px;
 
+    /*top right bottom left*/
+    padding: 64px, 32px, 64px, 32px;
+    
+}
 main{
-    font-family: "Schoolbell";
     max-width: 90vw;
-    min-height:calc(100vh - 128px);
-    text-align: center;
-    background-color: #fff;
-    border: radius 12px; 
+    min-height: calc(100vh - 128px);
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 12px;
+    /*border-width: 3px, border-style, border-color*/
     border: 3px solid black;
-    padding-inline:10rem;
+    padding-bottom: 32px;
+
 }
-.section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "nav", "oszlop" "table" "footer";
+section{
     padding: 32px;
-}
-
-.oszlop{
-    grid-area: oszlop;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "article_img";
-    text-align: left;
 
 }
-article{
-    display: grid;
-    grid-area: article;
+nav a{
+background-color: var(--fo_szin);
+color: var(--masodlagos_szin);
+font-size: 20px;
+padding: 0.5rem;
+border-radius: 12px;
+border: 1px solid black;
+}
+nav{
+    width: fit-content;
+    margin: auto;
+}
+.narancs{
+    color:var(--masodlagos_szin);
+
+}
+article {
     height: fit-content;
     max-width: 1080px;
     margin: auto;
-    
-}
-.nav{
-    grid-area: nav;}
-    li{
-    grid-area: nav;
-    display: inline-block;
-    list-style: none;
-    padding-top: 0;
-    color: #8d5b1a;
-    background-color: #feda70;
-    font-size: 20px;
-    padding;: 0.5rem;
-    border-radius:  12px;
-    border: 3px solid black;
-    text-decoration: none;
+    display: grid;
+    padding-block: 32px;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: repeat(2, fr); */
+
 }
 
+article img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
 
-.article_h1{
+/* <h1>
+betűméret: 28px
+betű vastagság: 400
+<h2>
+betűméret: 56px
+betű vastagság: 400
+<p>
+betűméret: 24px
+max szélesség: 60ch
+betű vastagság: 400 */
+h1{
     font-size: 28px;
-    font-weight: 400;
+    /* font-weight: 400; */
 }
 h2{
     font-size: 56px;
-    font-weight: 400;
+    /* font-weight: 400; */
 }
 p{
-    font-size: 24px;
+    font-size:  24px;
     max-width: 60ch;
-    font-weight: 400;
+    /* font-weight: 400; */
 }
-
-table{
-    grid: table;
-    text-align: justify;
+table,footer{
     max-width: 1080px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-   
+    margin:auto;
+    width: 100%;
 }
-table, tbody,thead,tr,th,td{
+table{
     border-collapse: collapse;
-    border:1px solid black;
-    padding: 10px;
-    text-align: left;
 }
 
-
-
-tbody tr:nth-child(even) {
-  background-color: #feda70;
-  color: #8d5b1a;
+table,tr,th,td{
+    border: 1px solid black;
 }
-
-
-tbody tr:nth-child(odd) {
-  background-color: #8d5b1a;
-  color: #feda70;
+th,td, footer{
+    padding: 16px;
 }
-
+table tr:nth-child(even),th, footer{
+    background-color: var(--masodlagos_szin);
+    color: var(--fo_szin);
+}
+table tr:nth-child(odd){
+    background-color: var(--fo_szin);
+    color: var(--masodlagos_szin);
+}
 footer{
-    grid-area: footer;
-    background-color:#8d5b1a;
-    margin-top: 16px;
-    border-radius: 4px;
-    color: #feda70;
-    padding: 5px;
+    text-align: center;
+
 }
+.badge{
+    width: 150px;
+    padding: 12px;
+    background-color: crimson;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    /* position: static; 
+    eredeti helyéhez képest relatív*/
+    /* position: relative;
+    top: 12px;
+    bottom: 0;
+    right: 0;
+    left: 200px;
+     */
+     /* position: fixed;
+     z-index: 10;
+     left: 50px;
+     top: 50px; */
+     /* position: absolute;
+     top: 32px;;
+     left:25%; */
+     position: sticky;
+     top: 0;
+
+}
+.badge-container{
+    background-color: white;
+    border: 2px solidblack;
+    height: 300px;
+    position: relative;
+}
+
+
+/* h1,h2,p{
+    font-weight: 400;
+} */
